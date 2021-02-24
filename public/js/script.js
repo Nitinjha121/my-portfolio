@@ -8,6 +8,21 @@ const names = document.querySelector(".contact-name");
 const email = document.querySelector(".contact-email");
 const message = document.querySelector(".contact-message");
 const subject = document.querySelector(".contact-subject");
+const projectImg =document.querySelectorAll(".project-img");
+const btnClick = document.querySelector(".btn-click");
+// const closest = btnClick.closest("");
+
+// projectImg.forEach(img=>{
+//     img.addEventListener("mouseover", ()=>{
+//         btnClick.classList.remove("hidden");
+//     })
+//     img.addEventListener("mouseout",()=>{
+//         btnClick.classList.add("hidden");
+//     })
+// })
+
+
+
 
 togleBtn.addEventListener("click", ()=>{
     togleBtn.classList.toggle("rotate");
