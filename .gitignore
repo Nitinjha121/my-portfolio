@@ -8,3 +8,4 @@ server
 webfontkit
 node_modules
 pic.jpg
+.env

@@ -23,7 +23,7 @@ app.post("/",  (req, res) =>{
         service: "gmail",
         auth: {
           user: "nitinjhacontact@gmail.com",
-          pass: "@NOOneKnow90#54$!^",
+          pass: "#ContactEmail90@12445",
         },
     });
 
@@ -33,7 +33,7 @@ app.post("/",  (req, res) =>{
         subject:`message from ${req.body.email}: ${req.body.subject}`,
         text:req.body.message,
     }
-  transporter.sendMail(mailOption,(error, info) => {
+  transporter.sendMail(mailOption,(error, info) => { console.log("Go")
     if(error) {
         // console.log("get an error",error);
         res.send("error");
