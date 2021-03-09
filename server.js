@@ -20,7 +20,9 @@ app.use(compression());
 app.post("/",  (req, res) =>{
 
     const transporter = nodemailer.createTransport({
-        service: "gmail",
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true,
         auth: {
           user: "nitinjhacontact@gmail.com",
           pass: "#ContactEmail90@12445",

@@ -122,7 +122,6 @@ contactForm.addEventListener("submit", (e)=>{
     }
 
      fetch("/",mail).then(res=>{
-         console.log(res);
         if(res.ok) {
             settledMessage.innerHTML="";
             names.value="";
