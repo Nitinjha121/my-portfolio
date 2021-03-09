@@ -1,6 +1,7 @@
 // console.log("check");
 const express = require('express');
 const app = express();
+const compression = require('compression');
 
 const nodemailer = require('nodemailer');
 
@@ -13,6 +14,8 @@ app.use(express.urlencoded({ extended:true }));
 app.get("/", (req, res) =>{
     res.sendFile(__dirname + '/index.html' );
 });
+
+app.use(compression());
 
 app.post("/",  (req, res) =>{
 
