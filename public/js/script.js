@@ -104,7 +104,7 @@ observer(navBtn, true);
 
 // contact-form action
 
-contactForm.addEventListener("submit",(e)=>{
+contactForm.addEventListener("submit", (e)=>{
     e.preventDefault();
 
     const formData = {
@@ -113,44 +113,32 @@ contactForm.addEventListener("submit",(e)=>{
         message: message.value,
         subject: subject.value,
     }
-    console.log(formData);
+    const mail = {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify(formData),
+    }
 
-    const xhr = new XMLHttpRequest();
+     fetch("/",mail).then(res=>{
+        if(res.ok) {
+            settledMessage.innerHTML="";
+            names.value="";
+            email.value="";
+            message.value="";
+            subject.value="";
+            settledMessage.innerHTML="Your Form Submitted Successfully";
+            settledMessage.style.color="#13A76B";
+        }
+        else {
+            settledMessage.innerHTML="";
+            settledMessage.innerHTML="Error: Something Went Wrong";
+            settledMessage.style.color="red";
+        }
+    });
 
-    // xhr.open('POST',"/");
-    // xhr.setRequestHeader('Content-Type', 'application/');
-    // xhr.onload=function(){
-    //     console.log(xhr.responseText);
-    //     if(xhr.responseText="success"){
-    //         settledMessage.innerHTML="Your Form Submitted Successfully";
-    //         settledMessage.style.color="#13A76B";
-    //     }
-    //     else{
-    //         alert(error)
-    //     }
-    // }
+   settledMessage.innerHTML=`<div class="lds-dual-ring"></div>`;
 
-    // const mail = new FormData(form);
-
-    // fetch("/send",{
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json"
-    //     },
-    //     body: mail,
-    // }).then(res=> {
-    //     console.log(res);
-    //     if(res.status="success"){
-    //         settledMessage.innerHTML="Your Form Submitted Successfully";
-    //         settledMessage.style.color="#13A76B";
-    //     }
-    //     else{
-    //         alert(error)
-    //     }
-    //    return res.json()
-    // } )
     
-
-    // sendMail(mail);
-
 })

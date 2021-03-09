@@ -10,8 +10,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="./public/css/style.css" />
-    <script src="./public/js/script.js" defer></script>
+    <link type="text/css" rel="stylesheet" href="/css/style.css" />
+    <script type="text/javascript" src="/js/script.js" defer></script>
     <!-- <link href="./widget.css" rel="stylesheet"> -->
     <!-- <script src="https://unpkg.com/scrollreveal" defer></script> -->
 </head>
@@ -37,6 +37,7 @@
 <div class="left-side">
 
     <h1>Hi, <br/> I'am Nitin <br/><span style="color: var(--primary-color);">Web Developer</span> </h1>
+    <button class="btn btn-contact" ><a class="contact-me"href="#contact">Contact</a></button>
     </div>
   <div class="right-side">
 
@@ -89,11 +90,25 @@
                 <h3 class="percent">60%</h3>
                 <p style=" width:60%;"></p>
             </div>
+
+            <div class="small-card">
+                <i class='bx bxl-react bx-md icons'></i>
+                <h3 class="skill-name">React</h3>
+                <h3 class="percent">50%</h3>
+                <p style=" width:50%;"></p>
+            </div>
+
+            <div class="small-card">
+                <i class='bx bxl-nodejs bx-md icons'></i>
+                <h3 class="skill-name">NodeJs</h3>
+                <h3 class="percent">40%</h3>
+                <p style=" width:40%;"></p>
+            </div>
     
            </div> 
            
            <div class="image">
-               <img src="./public/img/photo-1551739440-5dd934d3a94a.jfif" class="skill-img">
+               <img src="/img/photo-1551739440-5dd934d3a94a.jfif" class="skill-img">
            </div>
 
     </div>
@@ -126,14 +141,14 @@
 
         
   <div class="project-card">
-    <img src="./public/img/photo-1551739440-5dd934d3a94a.jfif" class="project-img">
+   <a href="https://musicplayer121.netlify.app/" target="_blank"> <img src="/img/musicPlayer.png" class="project-img"> </a>
     <figcaption>
-        100 JavaScript Projects
+       React Music Player
     </figcaption>
 </div>
 
 <div class="project-card">
-   <a href="https://movbox.netlify.app/" target="_blank"><img src="./public/img/MovBox.png" class="project-img"> </a>
+   <a href="https://movbox.netlify.app/" target="_blank"><img src="/img/MovBox.png" class="project-img"> </a>
     <button class="btn btn-click hidden"><i class='bx bx-link-alt bx-lg'>Click</i></button>
     <figcaption>
         Check Movie Revenue
@@ -141,14 +156,14 @@
 </div>
 
 <div class="project-card">
-   <a href="https://unsplashcloned.netlify.app/" target="_blank"> <img src="./public/img/unsplashclone.png" class="project-img"></a>
+   <a href="https://unsplashcloned.netlify.app/" target="_blank"> <img src="/img/unsplashclone.png" class="project-img"></a>
     <figcaption>
         Unsplash Clone
     </figcaption>
 </div>
 
 <div class="project-card">
-   <a href="https://nitinjha121.github.io/javascript-quiz/" target="_blank"> <img src="./public/img/quiz.png" class="project-img"></a>
+   <a href="https://nitinjha121.github.io/javascript-quiz/" target="_blank"> <img src="/img/quiz.png" class="project-img"></a>
     <figcaption>
         Quiz Game
     </figcaption>
@@ -157,14 +172,14 @@
       
         </div>
         <!-- <div class="project-card">
-          <a href="" target="_blank">  <img src="./public/img/photo-1551739440-5dd934d3a94a.jfif" class="project-img"> </a>
+          <a href="" target="_blank">  <img src="/img/photo-1551739440-5dd934d3a94a.jfif" class="project-img"> </a>
             <figcaption>
                 100 Days JavaScript Projects
             </figcaption>
         </div>
 
         <div class="project-card">
-            <img src="./public/img/photo-1551739440-5dd934d3a94a.jfif" class="project-img">
+            <img src="/img/photo-1551739440-5dd934d3a94a.jfif" class="project-img">
             <figcaption>
                 100 Days JavaScript Projects
             </figcaption>
@@ -177,15 +192,15 @@
         <article>
             <h1 class="heading">Contact</h1>
         </article>
-        <h3 style="margin-top:15px;color: red; text-align: center;">Working On It</h3>
+        <!-- <h3 style="margin-top:15px;color: red; text-align: center;">Working On It</h3> -->
         <div class="contact-container" method="post" action="./public/php/contact-form.php" enctype = "multipart/form-data">
-           <form class="contact-form">
+           <form class="contact-form" action="/" method="post">
             <input class="contact-input contact-name" name="name" type="text" placeholder="Name" required>
             <input class="contact-input contact-email" name="email" type="email" placeholder="Email" required>
             <input class="contact-input contact-subject" name="subject" type="text" placeholder="Subject" required>
             <textarea class="contact-message" name="message" placeholder="Message" ></textarea>
             <h3 class="settled-message"></h3>
-            <button class="btn btn-contact">Contact</button>
+            <button class="btn btn-submit">Contact</button>
         </form>
         </div>
     </section>
