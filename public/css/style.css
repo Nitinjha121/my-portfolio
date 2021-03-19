@@ -104,6 +104,19 @@ nav ul li a:hover::after {
   vertical-align: center;
   padding: 20px;
 }
+
+.social--linkIcons {
+  position: relative;
+  top: 20%;
+  left: -20%;
+  display: inline;
+}
+
+.social--linkIcons a:hover {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
 #skills {
   min-height: 100%;
   background-color: var(--secondary-bg-color);
@@ -517,6 +530,10 @@ textarea::placeholder {
   }
   .btn-submit {
     right: -70px;
+  }
+
+  .social--linkIcons {
+    left: -50%;
   }
 }
 @media (min-width: 1000px) {
